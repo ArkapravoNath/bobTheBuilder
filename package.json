@@ -1,0 +1,35 @@
+{
+  "name": "build-buddy",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Build Buddy — Residential Design & Cost-Estimation Platform",
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "scripts": {
+    "lint": "pnpm -r run lint",
+    "typecheck": "pnpm -r run typecheck",
+    "test": "pnpm -r run test",
+    "assets:ingest": "tsx scripts/assets-ingest.ts",
+    "tokens:sync": "tsx scripts/tokens-sync.ts",
+    "brand:generate": "tsx scripts/generate-brand-assets.ts",
+    "mock-api:dev": "pnpm -C services/mock-api run dev"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "prettier": "^3.2.5",
+    "tsx": "^4.7.1",
+    "typescript": "^5.4.5"
+  },
+  "pnpm": {
+    "overrides": {
+      "react": "18.3.1",
+      "react-native": "0.74.5"
+    }
+  }
+}

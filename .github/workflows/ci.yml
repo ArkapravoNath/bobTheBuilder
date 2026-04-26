@@ -1,0 +1,192 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  mobile:
+    name: Mobile (RN / Expo)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: apps/mobile
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 9
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+        working-directory: .
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Type-check
+        run: pnpm typecheck
+
+      - name: Unit tests
+        run: pnpm test --passWithNoTests
+
+      - name: Canvas unit tests (viewport math + snap-to-grid)
+        run: pnpm test:canvas
+
+      - name: Upload perf report artifact
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: canvas-perf-report-${{ github.sha }}
+          path: apps/mobile/perf-report.json
+          if-no-files-found: ignore
+
+  shared-schemas:
+    name: Shared Schemas
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: packages/shared-schemas
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 9
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+        working-directory: .
+
+      - name: Build
+        run: pnpm build
+
+      - name: Type-check
+        run: pnpm typecheck
+
+      - name: Unit tests
+        run: pnpm test --passWithNoTests
+
+  mock-api:
+    name: Mock API
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: services/mock-api
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 9
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+        working-directory: .
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Type-check
+        run: pnpm typecheck
+
+      - name: Unit tests
+        run: pnpm test --passWithNoTests
+
+  core-java:
+    name: Core Service (Java)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: services/core-java
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+          cache: 'gradle'
+
+      - name: Build & test
+        run: |
+          if [ -f "gradlew" ]; then
+            ./gradlew build test --no-daemon
+          else
+            echo "Gradle wrapper not yet present — skipping"
+          fi
+
+  pricing-py:
+    name: Pricing Service (Python)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: services/pricing-py
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          if [ -f "requirements.txt" ]; then
+            pip install -r requirements.txt
+          elif [ -f "pyproject.toml" ]; then
+            pip install -e ".[dev]"
+          else
+            echo "No Python project yet — skipping"
+          fi
+
+      - name: Lint
+        run: |
+          if [ -f "pyproject.toml" ] || [ -f "setup.py" ]; then
+            pip install ruff && ruff check .
+          else
+            echo "Skipping lint — no Python project yet"
+          fi
+
+      - name: Type-check
+        run: |
+          if [ -f "pyproject.toml" ] || [ -f "setup.py" ]; then
+            pip install mypy && mypy .
+          else
+            echo "Skipping mypy — no Python project yet"
+          fi
+
+      - name: Tests
+        run: |
+          if [ -f "pyproject.toml" ] || [ -f "setup.py" ]; then
+            pip install pytest && pytest --tb=short
+          else
+            echo "Skipping tests — no Python project yet"
+          fi

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" width="390" height="844">
+  <rect width="390" height="844" fill="#FBFAF7"/>
+  <rect width="390" height="52" fill="#2A2825"/>
+  <text x="20" y="58" font-family="Inter,sans-serif" font-size="12" fill="#FBFAF7" font-weight="600">9:41</text>
+  <text x="20" y="34" font-family="Inter,sans-serif" font-size="22" fill="#FBFAF7">‹</text>
+  <text x="195" y="34" font-family="Inter,sans-serif" font-size="15" fill="#FBFAF7" font-weight="600" text-anchor="middle">Project Detail</text>
+  <text x="370" y="34" font-family="Inter,sans-serif" font-size="20" fill="#FBFAF7" text-anchor="end">⋯</text>
+  <!-- Hero thumbnail -->
+  <rect x="0" y="52" width="390" height="200" fill="#1A2535"/>
+  <!-- Simple floor plan thumbnail in hero -->
+  <rect x="80" y="90" width="230" height="150" rx="4" fill="#2C3E50"/>
+  <rect x="96" y="104" width="90" height="70" rx="2" fill="#C3D9F720" stroke="#1E6FD9" stroke-width="1"/>
+  <rect x="196" y="104" width="98" height="70" rx="2" fill="#FEF3C720" stroke="#F39C1280" stroke-width="1"/>
+  <rect x="96" y="182" width="60" height="54" rx="2" fill="#D4EDE120" stroke="#27AE6080" stroke-width="1"/>
+  <rect x="162" y="182" width="132" height="54" rx="2" fill="#C3D9F720" stroke="#1E6FD980" stroke-width="1"/>
+  <text x="141" y="143" font-family="Inter,sans-serif" font-size="9" fill="#8AB8E8" text-anchor="middle">Living</text>
+  <text x="245" y="143" font-family="Inter,sans-serif" font-size="9" fill="#F0C060" text-anchor="middle">Kitchen</text>
+  <!-- Project info card -->
+  <rect x="16" y="236" width="358" height="116" rx="14" fill="#FFFFFF" stroke="#E8E2D7" stroke-width="1"/>
+  <text x="32" y="266" font-family="Georgia,serif" font-size="20" fill="#2A2825" font-weight="600">Sharma Residence</text>
+  <rect x="32" y="276" width="52" height="18" rx="5" fill="#27AE6020"/>
+  <text x="58" y="288" font-family="Inter,sans-serif" font-size="10" fill="#27AE60" text-anchor="middle" font-weight="700">SAVED</text>
+  <text x="32" y="308" font-family="Inter,sans-serif" font-size="13" fill="#8A857C">Mumbai  ·  Full House</text>
+  <text x="32" y="326" font-family="Inter,sans-serif" font-size="13" fill="#8A857C">2 floors  ·  1,070 sqft  ·  Updated 15 Feb</text>
+  <text x="354" y="298" font-family="Inter,sans-serif" font-size="12" fill="#1E6FD9" text-anchor="end">Edit ›</text>
+  <!-- Stats row -->
+  <rect x="16" y="368" width="170" height="76" rx="12" fill="#FFFFFF" stroke="#E8E2D7" stroke-width="1"/>
+  <text x="32" y="394" font-family="Inter,sans-serif" font-size="12" fill="#8A857C">Rooms</text>
+  <text x="32" y="420" font-family="Georgia,serif" font-size="28" fill="#2A2825" font-weight="700">6</text>
+  <rect x="204" y="368" width="170" height="76" rx="12" fill="#FFFFFF" stroke="#E8E2D7" stroke-width="1"/>
+  <text x="220" y="394" font-family="Inter,sans-serif" font-size="12" fill="#8A857C">Estimate</text>
+  <text x="220" y="418" font-family="Georgia,serif" font-size="22" fill="#1E6FD9" font-weight="700">₹45.3L</text>
+  <!-- Breakdown mini list -->
+  <text x="24" y="474" font-family="Inter,sans-serif" font-size="13" fill="#4A4744" font-weight="600">COST SUMMARY</text>
+  <rect x="16" y="484" width="358" height="180" rx="12" fill="#FFFFFF" stroke="#E8E2D7" stroke-width="1"/>
+  <text x="32" y="512" font-family="Inter,sans-serif" font-size="14" fill="#2A2825">Materials &amp; Fixtures</text>
+  <text x="354" y="512" font-family="Inter,sans-serif" font-size="14" fill="#2A2825" text-anchor="end" font-weight="600">₹23,11,200</text>
+  <line x1="32" y1="522" x2="358" y2="522" stroke="#E8E2D7" stroke-width="0.5"/>
+  <text x="32" y="546" font-family="Inter,sans-serif" font-size="14" fill="#2A2825">Labour (40%)</text>
+  <text x="354" y="546" font-family="Inter,sans-serif" font-size="14" fill="#2A2825" text-anchor="end" font-weight="600">₹9,24,480</text>
+  <line x1="32" y1="556" x2="358" y2="556" stroke="#E8E2D7" stroke-width="0.5"/>
+  <text x="32" y="580" font-family="Inter,sans-serif" font-size="14" fill="#2A2825">Mumbai Premium (1.25×)</text>
+  <text x="354" y="580" font-family="Inter,sans-serif" font-size="14" fill="#A06A3A" text-anchor="end" font-weight="600">+25%</text>
+  <line x1="32" y1="590" x2="358" y2="590" stroke="#E8E2D7" stroke-width="0.5"/>
+  <text x="32" y="614" font-family="Inter,sans-serif" font-size="14" fill="#2A2825">Overhead (12%)</text>
+  <text x="354" y="614" font-family="Inter,sans-serif" font-size="14" fill="#2A2825" text-anchor="end" font-weight="600">₹3,88,282</text>
+  <line x1="32" y1="624" x2="358" y2="624" stroke="#E8E2D7" stroke-width="0.5"/>
+  <text x="32" y="648" font-family="Inter,sans-serif" font-size="16" fill="#2A2825" font-weight="700">Grand Total</text>
+  <text x="354" y="648" font-family="Georgia,serif" font-size="18" fill="#1E6FD9" text-anchor="end" font-weight="700">₹45,29,953</text>
+  <!-- Actions -->
+  <rect x="16" y="688" width="170" height="52" rx="12" fill="#1E6FD9"/>
+  <text x="101" y="719" font-family="Inter,sans-serif" font-size="15" fill="#FFF" text-anchor="middle" font-weight="600">Export PDF</text>
+  <rect x="204" y="688" width="170" height="52" rx="12" fill="transparent" stroke="#1E6FD9" stroke-width="1.5"/>
+  <text x="289" y="719" font-family="Inter,sans-serif" font-size="15" fill="#1E6FD9" text-anchor="middle" font-weight="600">Share Link</text>
+  <rect x="155" y="828" width="80" height="4" rx="2" fill="#2A2825" opacity="0.2"/>
+</svg>

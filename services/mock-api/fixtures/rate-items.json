@@ -1,0 +1,134 @@
+[
+  {
+    "id": "ri_001",
+    "rateCardVersionId": "rcv_mock_v1",
+    "category": "material",
+    "sku": "MAT-CEMENT-OPC53",
+    "name": "OPC 53 Grade Cement",
+    "unit": "bag (50 kg)",
+    "baseRate": 380,
+    "currency": "INR",
+    "meta": { "brand": "UltraTech / ACC", "source": "IndiaMART seed" }
+  },
+  {
+    "id": "ri_002",
+    "rateCardVersionId": "rcv_mock_v1",
+    "category": "material",
+    "sku": "MAT-STEEL-TMT-FE500D",
+    "name": "TMT Steel Fe-500D (12mm)",
+    "unit": "per kg",
+    "baseRate": 72,
+    "currency": "INR",
+    "meta": { "brand": "SAIL / TATA", "source": "SteelMint seed" }
+  },
+  {
+    "id": "ri_003",
+    "rateCardVersionId": "rcv_mock_v1",
+    "category": "material",
+    "sku": "MAT-BRICK-RED-STD",
+    "name": "Red Clay Bricks (Standard)",
+    "unit": "per 1000 bricks",
+    "baseRate": 7200,
+    "currency": "INR",
+    "meta": { "size": "230x110x75mm", "source": "local supplier seed" }
+  },
+  {
+    "id": "ri_004",
+    "rateCardVersionId": "rcv_mock_v1",
+    "category": "material",
+    "sku": "MAT-TILE-VITRIFIED-600",
+    "name": "Vitrified Floor Tile (600×600mm)",
+    "unit": "per sqft",
+    "baseRate": 65,
+    "currency": "INR",
+    "meta": { "brand": "Kajaria / Somany", "grade": "GVT" }
+  },
+  {
+    "id": "ri_005",
+    "rateCardVersionId": "rcv_mock_v1",
+    "category": "material",
+    "sku": "MAT-TILE-MARBLE-ITALIAN",
+    "name": "Italian Marble (Carrara)",
+    "unit": "per sqft",
+    "baseRate": 320,
+    "currency": "INR",
+    "meta": { "thickness": "18mm", "finish": "polished" }
+  },
+  {
+    "id": "ri_006",
+    "rateCardVersionId": "rcv_mock_v1",
+    "category": "fixture",
+    "sku": "FIX-DOOR-TEAK-STD",
+    "name": "Teak Wood Door (Standard — 2100×900mm)",
+    "unit": "per unit",
+    "baseRate": 18500,
+    "currency": "INR",
+    "meta": { "species": "Burma Teak", "includes": "frame + fittings" }
+  },
+  {
+    "id": "ri_007",
+    "rateCardVersionId": "rcv_mock_v1",
+    "category": "fixture",
+    "sku": "FIX-WINDOW-UPVC-STD",
+    "name": "UPVC Sliding Window (1200×1050mm)",
+    "unit": "per unit",
+    "baseRate": 9800,
+    "currency": "INR",
+    "meta": { "profile": "60mm series", "glazing": "5mm toughened" }
+  },
+  {
+    "id": "ri_008",
+    "rateCardVersionId": "rcv_mock_v1",
+    "category": "material",
+    "sku": "MAT-SAND-RIVER",
+    "name": "River Sand (M-Sand alternative)",
+    "unit": "per cubic foot",
+    "baseRate": 60,
+    "currency": "INR",
+    "meta": { "type": "washed river sand / M-sand" }
+  },
+  {
+    "id": "ri_009",
+    "rateCardVersionId": "rcv_mock_v1",
+    "category": "material",
+    "sku": "MAT-GRANITE-BLACK-PEARL",
+    "name": "Black Pearl Granite (Kitchen Counter)",
+    "unit": "per sqft",
+    "baseRate": 185,
+    "currency": "INR",
+    "meta": { "thickness": "20mm", "finish": "polished" }
+  },
+  {
+    "id": "ri_010",
+    "rateCardVersionId": "rcv_mock_v1",
+    "category": "material",
+    "sku": "MAT-PAINT-EMULSION-INT",
+    "name": "Interior Emulsion Paint (Premium)",
+    "unit": "per sqft (2 coats)",
+    "baseRate": 28,
+    "currency": "INR",
+    "meta": { "brand": "Asian Paints Tractor / Nerolac Excel", "sheen": "matt" }
+  },
+  {
+    "id": "ri_011",
+    "rateCardVersionId": "rcv_mock_v1",
+    "category": "fixture",
+    "sku": "FIX-STAIRCASE-RCC-FLIGHT",
+    "name": "RCC Staircase (per flight, 10 risers)",
+    "unit": "per flight",
+    "baseRate": 45000,
+    "currency": "INR",
+    "meta": { "riser": "175mm", "tread": "250mm", "width": "1000mm" }
+  },
+  {
+    "id": "ri_012",
+    "rateCardVersionId": "rcv_mock_v1",
+    "category": "material",
+    "sku": "MAT-ELECTRICAL-WIRING-PKG",
+    "name": "Electrical Wiring Package (per room)",
+    "unit": "per room",
+    "baseRate": 12000,
+    "currency": "INR",
+    "meta": { "includes": "wiring, switches, sockets, DB work" }
+  }
+]

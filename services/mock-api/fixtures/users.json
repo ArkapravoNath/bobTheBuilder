@@ -1,0 +1,36 @@
+[
+  {
+    "id": "usr_001",
+    "email": "ria@example.com",
+    "displayName": "Ria Sharma",
+    "role": "user",
+    "onboardingComplete": true,
+    "archetype": "full_house",
+    "location": { "city": "Mumbai", "postcode": "400001" },
+    "plot": { "totalArea": 2400, "unit": "sqft" },
+    "budgetHint": 8000000,
+    "createdAt": "2026-01-15T09:30:00Z"
+  },
+  {
+    "id": "usr_002",
+    "email": "dev@example.com",
+    "displayName": "Dev Anand",
+    "role": "user",
+    "onboardingComplete": true,
+    "archetype": "mansion",
+    "location": { "city": "Bengaluru", "postcode": "560001" },
+    "plot": { "totalArea": 4500, "unit": "sqft" },
+    "budgetHint": 25000000,
+    "createdAt": "2026-01-20T11:00:00Z"
+  },
+  {
+    "id": "usr_003",
+    "email": "anjali@example.com",
+    "displayName": "Anjali Mehta",
+    "role": "admin",
+    "onboardingComplete": true,
+    "archetype": "partial_home",
+    "location": { "city": "Delhi", "postcode": "110001" },
+    "createdAt": "2026-01-10T08:00:00Z"
+  }
+]

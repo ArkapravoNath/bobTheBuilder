@@ -1,0 +1,189 @@
+[
+  {
+    "id": "dsn_001",
+    "userId": "usr_001",
+    "name": "Sharma Residence — Andheri",
+    "archetype": "full_house",
+    "status": "saved",
+    "location": { "city": "Mumbai", "postcode": "400053" },
+    "plot": { "width": 40, "depth": 60, "unit": "sqft", "totalArea": 2400 },
+    "floors": [
+      {
+        "index": 0,
+        "label": "Ground Floor",
+        "heightFt": 10,
+        "rooms": [
+          {
+            "id": "rm_001a",
+            "type": "living",
+            "label": "Living Room",
+            "polygon": [{"x":0,"y":0},{"x":400,"y":0},{"x":400,"y":300},{"x":0,"y":300}],
+            "ceilingHeight": 10,
+            "areaSqft": 400,
+            "finishes": { "floor": "vitrified_tile", "walls": "plaster_paint" },
+            "fixtures": []
+          },
+          {
+            "id": "rm_001b",
+            "type": "kitchen",
+            "label": "Kitchen",
+            "polygon": [{"x":400,"y":0},{"x":600,"y":0},{"x":600,"y":300},{"x":400,"y":300}],
+            "ceilingHeight": 10,
+            "areaSqft": 200,
+            "finishes": { "floor": "ceramic_tile", "walls": "plaster_paint" },
+            "fixtures": []
+          }
+        ],
+        "stairs": []
+      },
+      {
+        "index": 1,
+        "label": "First Floor",
+        "heightFt": 10,
+        "rooms": [
+          {
+            "id": "rm_001c",
+            "type": "bedroom",
+            "label": "Master Bedroom",
+            "polygon": [{"x":0,"y":0},{"x":350,"y":0},{"x":350,"y":300},{"x":0,"y":300}],
+            "ceilingHeight": 10,
+            "areaSqft": 350,
+            "finishes": { "floor": "hardwood", "walls": "wallpaper" },
+            "fixtures": []
+          },
+          {
+            "id": "rm_001d",
+            "type": "bathroom",
+            "label": "Master Bath",
+            "polygon": [{"x":350,"y":0},{"x":500,"y":0},{"x":500,"y":200},{"x":350,"y":200}],
+            "ceilingHeight": 10,
+            "areaSqft": 120,
+            "finishes": { "floor": "ceramic_tile", "walls": "stone_cladding" },
+            "fixtures": []
+          }
+        ],
+        "stairs": []
+      }
+    ],
+    "schemaVersion": "1.0.0",
+    "createdAt": "2026-02-01T10:00:00Z",
+    "updatedAt": "2026-02-15T14:30:00Z"
+  },
+  {
+    "id": "dsn_002",
+    "userId": "usr_001",
+    "name": "Weekend Home — Lonavala",
+    "archetype": "partial_home",
+    "status": "draft",
+    "location": { "city": "Pune", "postcode": "410401" },
+    "plot": { "totalArea": 1200, "unit": "sqft" },
+    "floors": [
+      {
+        "index": 0,
+        "label": "Ground Floor",
+        "heightFt": 10,
+        "rooms": [
+          {
+            "id": "rm_002a",
+            "type": "bedroom",
+            "label": "Bedroom 1",
+            "polygon": [{"x":0,"y":0},{"x":300,"y":0},{"x":300,"y":250},{"x":0,"y":250}],
+            "ceilingHeight": 10,
+            "areaSqft": 300,
+            "finishes": {},
+            "fixtures": []
+          }
+        ],
+        "stairs": []
+      }
+    ],
+    "schemaVersion": "1.0.0",
+    "createdAt": "2026-03-10T09:00:00Z",
+    "updatedAt": "2026-03-10T09:00:00Z"
+  },
+  {
+    "id": "dsn_003",
+    "userId": "usr_002",
+    "name": "Anand Villa — Whitefield",
+    "archetype": "mansion",
+    "status": "saved",
+    "location": { "city": "Bengaluru", "postcode": "560066" },
+    "plot": { "width": 60, "depth": 75, "unit": "sqft", "totalArea": 4500 },
+    "floors": [
+      {
+        "index": 0,
+        "label": "Ground Floor",
+        "heightFt": 12,
+        "rooms": [
+          {
+            "id": "rm_003a",
+            "type": "living",
+            "label": "Grand Living",
+            "polygon": [{"x":0,"y":0},{"x":600,"y":0},{"x":600,"y":400},{"x":0,"y":400}],
+            "ceilingHeight": 12,
+            "areaSqft": 600,
+            "finishes": { "floor": "italian_marble", "walls": "stone_cladding" },
+            "fixtures": []
+          }
+        ],
+        "stairs": []
+      }
+    ],
+    "schemaVersion": "1.0.0",
+    "createdAt": "2026-01-25T14:00:00Z",
+    "updatedAt": "2026-04-01T16:00:00Z"
+  },
+  {
+    "id": "dsn_004",
+    "userId": "usr_003",
+    "name": "Test Design — Single Room",
+    "archetype": "single_room",
+    "status": "draft",
+    "location": { "city": "Delhi", "postcode": "110001" },
+    "plot": { "totalArea": 250, "unit": "sqft" },
+    "floors": [
+      {
+        "index": 0,
+        "label": "Ground Floor",
+        "heightFt": 9,
+        "rooms": [
+          {
+            "id": "rm_004a",
+            "type": "bedroom",
+            "label": "Room",
+            "polygon": [{"x":0,"y":0},{"x":250,"y":0},{"x":250,"y":200},{"x":0,"y":200}],
+            "ceilingHeight": 9,
+            "areaSqft": 250,
+            "finishes": {},
+            "fixtures": []
+          }
+        ],
+        "stairs": []
+      }
+    ],
+    "schemaVersion": "1.0.0",
+    "createdAt": "2026-04-20T10:00:00Z",
+    "updatedAt": "2026-04-20T10:00:00Z"
+  },
+  {
+    "id": "dsn_005",
+    "userId": "usr_001",
+    "name": "Office Renovation — BKC",
+    "archetype": "partial_home",
+    "status": "archived",
+    "location": { "city": "Mumbai", "postcode": "400051" },
+    "plot": { "totalArea": 800, "unit": "sqft" },
+    "floors": [
+      {
+        "index": 0,
+        "label": "Floor 1",
+        "heightFt": 10,
+        "rooms": [],
+        "stairs": []
+      }
+    ],
+    "schemaVersion": "1.0.0",
+    "createdAt": "2025-12-01T08:00:00Z",
+    "updatedAt": "2025-12-15T12:00:00Z"
+  }
+]

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Build Buddy — Mockup Set v1 · classic mellow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Nunito:wght@800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #FBFAF7;
+      --raised: #FFFFFF;
+      --border: #E8E2D7;
+      --ink: #2A2825;
+      --muted: #8A857C;
+      --brass: #A06A3A;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 56px 32px 96px;
+      font-family: Inter, system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+    }
+    header {
+      max-width: 1240px;
+      margin: 0 auto 56px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 32px;
+    }
+    .meta {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 4px 12px;
+      background: var(--ink);
+      color: var(--bg);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 3px;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: 56px;
+      margin: 0 0 12px;
+      line-height: 1;
+    }
+    .lede {
+      font-size: 15px;
+      color: var(--muted);
+      max-width: 760px;
+      line-height: 1.65;
+      margin: 0;
+    }
+    .lede em {
+      color: var(--brass);
+      font-style: italic;
+    }
+    .grid {
+      max-width: 1320px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+      gap: 36px;
+    }
+    .frame {
+      background: transparent;
+    }
+    .frame .label {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin: 0 4px 14px;
+    }
+    .frame .num {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: 14px;
+      color: var(--brass);
+      letter-spacing: 3px;
+    }
+    .frame .name {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: 22px;
+    }
+    .frame .desc {
+      font-size: 12px;
+      color: var(--muted);
+      margin: 4px 4px 14px;
+      font-style: italic;
+    }
+    .frame img {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: #fff;
+      box-shadow: 0 6px 24px rgba(31,42,51,0.08);
+    }
+    .map {
+      max-width: 1320px;
+      margin: 80px auto 0;
+      padding: 32px 40px;
+      background: var(--raised);
+      border: 1px solid var(--border);
+    }
+    .map h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: 28px;
+      margin: 0 0 8px;
+    }
+    .map h2 + p {
+      color: var(--muted);
+      font-style: italic;
+      margin: 0 0 24px;
+      font-size: 14px;
+    }
+    .map p { color: var(--ink); margin: 6px 0; font-size: 14px; line-height: 1.6; }
+    .map p strong { color: var(--brass); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <header>
+    <span class="meta">V1 · CLASSIC MELLOW</span>
+    <h1>Build Buddy mockups</h1>
+    <p class="lede">
+      Ten mobile screens, 390 × 844, in the agreed direction: cream background, Cormorant Garamond
+      headlines, brass accents, photo-driven cards. The playful BUILD BUDDY mascot lives as a
+      small wordmark in headers — a signature touch of warmth against an otherwise editorial layout.
+      All amounts in <em>₹ INR</em>. <em>Vastu logic removed throughout the app.</em>
+    </p>
+  </header>
+
+  <div class="grid">
+    <div class="frame"><div class="label"><span class="name">Sign In</span><span class="num">01</span></div><div class="desc">Email · Google · Apple</div><img src="01_sign_in.svg" alt="Sign In"></div>
+    <div class="frame"><div class="label"><span class="name">Property Topology</span><span class="num">02</span></div><div class="desc">Onboarding step 01 — pick archetype</div><img src="02_onboarding_archetype.svg" alt="Archetype Picker"></div>
+    <div class="frame"><div class="label"><span class="name">Project Site</span><span class="num">03</span></div><div class="desc">Onboarding step 02 — Indian city</div><img src="03_onboarding_location.svg" alt="Location Picker"></div>
+    <div class="frame"><div class="label"><span class="name">Portfolio</span><span class="num">04</span></div><div class="desc">My Projects · saved designs</div><img src="04_designs_list.svg" alt="Designs List"></div>
+    <div class="frame"><div class="label"><span class="name">Plan Mode · 2D</span><span class="num">05</span></div><div class="desc">Floor plan editor with live cost banner</div><img src="05_design_canvas.svg" alt="Design Canvas"></div>
+    <div class="frame"><div class="label"><span class="name">3D Model Viewer</span><span class="num">06</span></div><div class="desc">Orthographic projection with measure mode</div><img src="06_3d_model_viewer.svg" alt="3D Model Viewer"></div>
+    <div class="frame"><div class="label"><span class="name">Material Palette</span><span class="num">07</span></div><div class="desc">Wall · floor · fixture finishes per room</div><img src="07_finishes_palette.svg" alt="Material Palette"></div>
+    <div class="frame"><div class="label"><span class="name">Project Summary</span><span class="num">08</span></div><div class="desc">Investment breakdown · ± 12% confidence</div><img src="08_estimate_summary.svg" alt="Estimate Summary"></div>
+    <div class="frame"><div class="label"><span class="name">Layout Generator</span><span class="num">09</span></div><div class="desc">AI-generated floor plans (no Vastu)</div><img src="09_ai_layout_generator.svg" alt="Layout Generator"></div>
+    <div class="frame"><div class="label"><span class="name">Project Detail</span><span class="num">10</span></div><div class="desc">Saved-project review</div><img src="10_project_detail.svg" alt="Project Detail"></div>
+  </div>
+
+  <section class="map">
+    <h2>Mapped from your reference set</h2>
+    <p>Brand-mark stays playful, layout becomes editorial.</p>
+
+    <p><strong>01</strong> Sign In ← reference "BUILD" — same IA, swapped serif into Cormorant; underline-style inputs replace bordered fields.</p>
+    <p><strong>02</strong> Property Topology ← reference "Architectural Studio · New Project Setup" — Mansion / Villa / Apartment cards with line-art icons + a fourth Single-Room option.</p>
+    <p><strong>03</strong> Project Site — new screen, Indian Tier-I cities with regional multipliers (1.25 ×, 1.22 ×, …).</p>
+    <p><strong>04</strong> Portfolio — new screen, dark thumbnail + brass schematic badges; status visible at a glance.</p>
+    <p><strong>05</strong> Plan Mode 2D ← reference grid editor — adds a live "running estimate" banner with a "VIEW IN 3D" CTA that hands off to screen 06.</p>
+    <p><strong>06</strong> 3D Model Viewer ← reference "Architectural Studio · Residence 04" — measure mode, rotation/zoom controls, structural-level tabs, space zoning. The new screen you asked for.</p>
+    <p><strong>07</strong> Material Palette ← reference "Architexture Material Palette" — wall finish cards (Plaster / Teak / Wallpaper), flooring (Italian Marble / Vitrified Tile), live cost impact in the dark footer.</p>
+    <p><strong>08</strong> Project Summary ← reference "Glass Pavilion Investment" — itemised breakdown with the labour 40% line surfaced explicitly.</p>
+    <p><strong>09</strong> Layout Generator ← reference "Estate Luxe Layout Generator" — Vastu toggle removed; only Maximise Natural Light + Open Plan remain.</p>
+    <p><strong>10</strong> Project Detail ← reference "Estate Luxe Ojas Residence" — same hero + breakdown structure; no Vastu Premium line item.</p>
+  </section>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" width="390" height="844">
+  <rect width="390" height="844" fill="#1A1F2E"/>
+  <rect width="390" height="52" fill="#111520"/>
+  <text x="20" y="58" font-family="Inter,sans-serif" font-size="12" fill="#FBFAF7" font-weight="600">9:41</text>
+  <text x="20" y="34" font-family="Inter,sans-serif" font-size="22" fill="#FBFAF7">‹</text>
+  <text x="195" y="34" font-family="Inter,sans-serif" font-size="15" fill="#FBFAF7" font-weight="600" text-anchor="middle">3D Model Viewer</text>
+  <!-- Floor tabs -->
+  <rect x="0" y="52" width="390" height="40" fill="#111520"/>
+  <rect x="16" y="60" width="60" height="24" rx="4" fill="#1E6FD9"/>
+  <text x="46" y="76" font-family="Inter,sans-serif" font-size="12" fill="#FFF" text-anchor="middle" font-weight="600">Ground</text>
+  <rect x="84" y="60" width="52" height="24" rx="4" fill="transparent"/>
+  <text x="110" y="76" font-family="Inter,sans-serif" font-size="12" fill="#8A857C" text-anchor="middle">Floor 1</text>
+  <rect x="144" y="60" width="52" height="24" rx="4" fill="transparent"/>
+  <text x="170" y="76" font-family="Inter,sans-serif" font-size="12" fill="#8A857C" text-anchor="middle">Roof</text>
+  <!-- 3D orthographic house (isometric-style) -->
+  <!-- Front face -->
+  <polygon points="80,400 200,320 320,400 320,560 200,560 80,560" fill="#2C3E50" stroke="#3D5166" stroke-width="1"/>
+  <!-- Roof left -->
+  <polygon points="80,400 200,300 200,320 80,400" fill="#1A2535"/>
+  <!-- Roof right -->
+  <polygon points="200,300 320,400 200,320" fill="#243040"/>
+  <!-- Door -->
+  <rect x="178" y="480" width="44" height="80" rx="2" fill="#A06A3A" opacity="0.8"/>
+  <!-- Window L -->
+  <rect x="100" y="420" width="50" height="40" rx="2" fill="#4A90D9" opacity="0.6" stroke="#6AA8E8" stroke-width="1"/>
+  <!-- Window R -->
+  <rect x="250" y="420" width="50" height="40" rx="2" fill="#4A90D9" opacity="0.6" stroke="#6AA8E8" stroke-width="1"/>
+  <!-- Floor indicator -->
+  <polygon points="80,560 200,560 320,560 280,620 120,620" fill="#1A1F2E" stroke="#3D5166" stroke-width="1"/>
+  <!-- Zone label -->
+  <text x="195" y="595" font-family="Inter,sans-serif" font-size="11" fill="#8A857C" text-anchor="middle">Ground Level</text>
+  <!-- Controls -->
+  <circle cx="350" cy="220" r="24" fill="#FFFFFF10" stroke="#FFFFFF20" stroke-width="1"/>
+  <text x="350" y="225" font-family="Inter,sans-serif" font-size="16" fill="#FBFAF7" text-anchor="middle">⟳</text>
+  <circle cx="350" cy="280" r="24" fill="#FFFFFF10" stroke="#FFFFFF20" stroke-width="1"/>
+  <text x="350" y="285" font-family="Inter,sans-serif" font-size="18" fill="#FBFAF7" text-anchor="middle">+</text>
+  <circle cx="350" cy="340" r="24" fill="#FFFFFF10" stroke="#FFFFFF20" stroke-width="1"/>
+  <text x="350" y="347" font-family="Inter,sans-serif" font-size="18" fill="#FBFAF7" text-anchor="middle">−</text>
+  <!-- Measure mode toggle -->
+  <rect x="16" y="680" width="110" height="36" rx="18" fill="#1E6FD920" stroke="#1E6FD9" stroke-width="1"/>
+  <text x="71" y="703" font-family="Inter,sans-serif" font-size="13" fill="#1E6FD9" text-anchor="middle" font-weight="600">📏 Measure</text>
+  <!-- Dimension annotation -->
+  <line x1="80" y1="560" x2="320" y2="560" stroke="#1E6FD9" stroke-width="1" stroke-dasharray="4 2"/>
+  <text x="200" y="575" font-family="Inter,sans-serif" font-size="11" fill="#1E6FD9" text-anchor="middle">40.0 ft</text>
+  <!-- Bottom bar -->
+  <rect x="0" y="780" width="390" height="64" fill="#111520"/>
+  <text x="78" y="818" font-family="Inter,sans-serif" font-size="22" text-anchor="middle" fill="#1E6FD9">◉</text>
+  <text x="195" y="818" font-family="Inter,sans-serif" font-size="22" text-anchor="middle" fill="#8A857C">✏️</text>
+  <text x="312" y="818" font-family="Inter,sans-serif" font-size="22" text-anchor="middle" fill="#8A857C">📊</text>
+  <rect x="155" y="830" width="80" height="4" rx="2" fill="#FBFAF7" opacity="0.15"/>
+</svg>
