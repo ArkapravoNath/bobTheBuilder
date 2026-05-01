@@ -1,7 +1,7 @@
 # Build Buddy — Sprint Tracker
 
-> Last updated: 2026-04-25
-> Phase: Frontend-First (Sprint 1 of 4)
+> Last updated: 2026-04-30
+> Phase: Frontend-First (Sprint 3 of 4)
 
 ---
 
@@ -44,15 +44,18 @@
 
 **Goal:** Draw and move rooms on a 2D canvas with pinch-zoom, snap-to-grid, floor tabs.
 
-**Status:** 🔄 In Progress (2/3 tasks done)
+**Status:** ✅ Complete
 
 | Task ID | Title | Status | Story Points |
 |---------|-------|--------|-------------|
 | TASK-2001 | Skia canvas harness — pan, pinch-zoom, snap-to-grid, ruler | ✅ Done | 13 |
 | TASK-2002 | Floor manager — add/remove/reorder floors, tabs | ✅ Done | 5 |
-| TASK-2003 | Room primitive — draw, resize, room-type picker, collision | ⬜ Pending | 8 |
+| TASK-2003 | Room primitive — draw, resize, type-picker, collision, warm palette | ✅ Done | 13 ↑ |
+| Design system overhaul | Warm palette, dark CTAs, underline inputs (matches references) | ✅ Done | 5 |
+| Currency formatter | ₹ lakhs/crores formatter + 39 unit tests | ✅ Done | 3 |
+| 3D Model Viewer redesign | Isometric Skia view + zone overlays + material picker | ✅ Done | 13 |
 
-**Sprint 2 total:** 26 pts (13 done, 13 remaining)
+**Sprint 2 total:** 52 pts completed (velocity increased)
 
 ### TASK-2001 Deliverables
 - `src/canvas/` — types, constants, viewport transform math (pure TS, fully unit-tested)
@@ -70,17 +73,29 @@
 
 ## Sprint 3 — Fixtures, Finishes, CRUD, Undo/Redo (Weeks 5–6)
 
-**Status:** 🔜 Not Started
+**Status:** 🔄 In Progress
 
 | Task ID | Title | Status | Story Points |
 |---------|-------|--------|-------------|
-| TASK-2004 | Fixture tray — doors, windows, stairs | ⬜ Pending | 8 |
+| TASK-2004 | Fixture tray — doors, windows, stairs | ✅ Done | 8 |
 | TASK-2005 | Finishes palette — long-press room → floor/wall/ceiling/paint | ⬜ Pending | 5 |
 | TASK-2006 | Design CRUD with auto-save (5s throttle) | ⬜ Pending | 8 |
 | TASK-2007 | Undo/redo stack (50-step) | ⬜ Pending | 8 |
 | TASK-2008 | Canvas performance hardening | ⬜ Pending | 5 |
 
-**Sprint 3 total:** 34 pts
+**Sprint 3 total:** 34 pts (8 completed)
+
+### TASK-2004 Deliverables
+- `src/canvas/fixture/fixtureTypes.ts` — WallAnchor, DoorSpec, WindowSpec, StairSpec, CanvasFixture, TRAY_ITEMS
+- `src/canvas/fixture/wallSnap.ts` — `roomWalls()`, `distToSegment()`, `snapToWall()` (WALL_SNAP_THRESHOLD=18 canvas units), `anchorToCanvasPos()`
+- `src/canvas/fixture/useFixtureStore.ts` — Zustand store: addFixture, commitAnchor, removeFixture, selectFixture, updateSpec, setActiveTool
+- `src/canvas/fixture/FixtureLayer.tsx` — Skia rendering: `buildDoorPath()` (leaf rect + swing arc), `buildWindowPath()` (pane dividers), `buildStairPath()` (step lines + direction arrow); `useDerivedValue` for full UI-thread rendering
+- `src/canvas/fixture/FixtureTray.tsx` — horizontal tray with 🚪 Door / 🪟 Window / 🪜 Stairs buttons; tap-to-activate placement tool; active teal highlight
+- `src/canvas/fixture/FixtureSpecSheet.tsx` — modal bottom sheet: DoorPanel (style/width/material), WindowPanel (style/width/height/glazing/panes), StairPanel (direction/width/run/risers); stepper + pills; delete button
+- `src/canvas/__tests__/fixture.test.ts` — **25 unit tests** for wallSnap math: roomWalls, snapToWall, anchorToCanvasPos, WALL_SNAP_THRESHOLD
+- Wired into `app/(app)/canvas/[designId].tsx`: tap near wall → snap + place; "Edit Fixture" in banner; FixtureSpecSheet opens on selection
+- All canvas exports updated in `src/canvas/index.ts`
+- **64/64 unit tests passing** across all canvas test suites
 
 ---
 
@@ -134,6 +149,6 @@ Once Sprint 4 is complete → ready for real-backend Sprint 1.
 | Sprint | Planned pts | Completed pts | Velocity |
 |--------|------------|---------------|---------|
 | Sprint 1 | ~35 (infra + shell) | 35 | ✅ |
-| Sprint 2 | 26 | — | — |
-| Sprint 3 | 34 | — | — |
+| Sprint 2 | 26 | 52 (velocity +100%) | ✅ |
+| Sprint 3 | 34 | 8 so far (TASK-2004) | 🔄 |
 | Sprint 4 | 8 | — | — |

@@ -1,66 +1,76 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" width="390" height="844">
-  <rect width="390" height="844" fill="#FBFAF7"/>
-  <rect width="390" height="52" fill="#2A2825"/>
-  <text x="20" y="58" font-family="Inter,sans-serif" font-size="12" fill="#FBFAF7" font-weight="600">9:41</text>
-  <text x="20" y="34" font-family="Inter,sans-serif" font-size="22" fill="#FBFAF7">‹</text>
-  <text x="195" y="34" font-family="Inter,sans-serif" font-size="15" fill="#FBFAF7" font-weight="600" text-anchor="middle">Layout Generator</text>
-  <!-- Parameters card -->
-  <rect x="24" y="68" width="342" height="200" rx="14" fill="#FFFFFF" stroke="#E8E2D7" stroke-width="1"/>
-  <text x="40" y="96" font-family="Inter,sans-serif" font-size="13" fill="#4A4744" font-weight="600">PLOT SIZE</text>
-  <!-- Sqft slider -->
-  <text x="40" y="124" font-family="Inter,sans-serif" font-size="14" fill="#2A2825">Total area: <tspan font-weight="700">2,500 sqft</tspan></text>
-  <rect x="40" y="134" width="306" height="4" rx="2" fill="#E8E2D7"/>
-  <rect x="40" y="134" width="192" height="4" rx="2" fill="#1E6FD9"/>
-  <circle cx="232" cy="136" r="8" fill="#1E6FD9" stroke="#FFF" stroke-width="2"/>
-  <!-- Bedrooms -->
-  <text x="40" y="164" font-family="Inter,sans-serif" font-size="13" fill="#4A4744" font-weight="600">BEDROOMS</text>
-  <rect x="40" y="172" width="44" height="28" rx="8" fill="#E8E2D7"/>
-  <text x="62" y="191" font-family="Inter,sans-serif" font-size="14" fill="#4A4744" text-anchor="middle">2</text>
-  <rect x="92" y="172" width="44" height="28" rx="8" fill="#1E6FD9"/>
-  <text x="114" y="191" font-family="Inter,sans-serif" font-size="14" fill="#FFF" text-anchor="middle">3</text>
-  <rect x="144" y="172" width="44" height="28" rx="8" fill="#E8E2D7"/>
-  <text x="166" y="191" font-family="Inter,sans-serif" font-size="14" fill="#4A4744" text-anchor="middle">4</text>
-  <!-- Toggles -->
-  <text x="40" y="220" font-family="Inter,sans-serif" font-size="14" fill="#2A2825">Maximise Natural Light</text>
-  <rect x="296" y="208" width="44" height="24" rx="12" fill="#1E6FD9"/>
-  <circle cx="328" cy="220" r="10" fill="#FFF"/>
-  <text x="40" y="248" font-family="Inter,sans-serif" font-size="14" fill="#2A2825">Open Plan Layout</text>
-  <rect x="296" y="236" width="44" height="24" rx="12" fill="#E8E2D7"/>
-  <circle cx="308" cy="248" r="10" fill="#FFF"/>
-  <!-- Generate button -->
-  <rect x="24" y="284" width="342" height="52" rx="12" fill="#1E6FD9"/>
-  <text x="195" y="315" font-family="Inter,sans-serif" font-size="16" fill="#FFF" font-weight="600" text-anchor="middle">✦  Generate Layouts</text>
-  <!-- Results -->
-  <text x="24" y="366" font-family="Inter,sans-serif" font-size="14" fill="#4A4744" font-weight="600">3 candidate layouts</text>
-  <!-- Layout card 1 -->
-  <rect x="24" y="380" width="342" height="128" rx="12" fill="#FFFFFF" stroke="#1E6FD9" stroke-width="1.5"/>
-  <text x="40" y="402" font-family="Inter,sans-serif" font-size="13" fill="#1E6FD9" font-weight="700">Layout A — Score 94%</text>
-  <!-- Mini floor plan sketch -->
-  <rect x="40" y="410" width="120" height="80" rx="4" fill="#EBF2FC"/>
-  <rect x="44" y="414" width="50" height="36" rx="2" fill="#C3D9F7" stroke="#1E6FD9" stroke-width="0.5"/>
-  <rect x="98" y="414" width="58" height="36" rx="2" fill="#FEF3C7" stroke="#F39C12" stroke-width="0.5"/>
-  <rect x="44" y="454" width="36" height="32" rx="2" fill="#D4EDE1" stroke="#27AE60" stroke-width="0.5"/>
-  <rect x="84" y="454" width="72" height="32" rx="2" fill="#C3D9F7" stroke="#1E6FD9" stroke-width="0.5"/>
-  <text x="174" y="438" font-family="Inter,sans-serif" font-size="11" fill="#8A857C">3 Bed · 2 Bath</text>
-  <text x="174" y="454" font-family="Inter,sans-serif" font-size="11" fill="#8A857C">Open-plan kitchen</text>
-  <text x="174" y="470" font-family="Inter,sans-serif" font-size="11" fill="#8A857C">South-facing living</text>
-  <rect x="252" y="476" width="98" height="28" rx="8" fill="#1E6FD9"/>
-  <text x="301" y="494" font-family="Inter,sans-serif" font-size="12" fill="#FFF" text-anchor="middle" font-weight="600">Use Layout</text>
-  <!-- Layout card 2 -->
-  <rect x="24" y="520" width="342" height="100" rx="12" fill="#FFFFFF" stroke="#E8E2D7" stroke-width="1"/>
-  <text x="40" y="542" font-family="Inter,sans-serif" font-size="13" fill="#4A4744" font-weight="600">Layout B — Score 87%</text>
-  <rect x="40" y="550" width="120" height="56" rx="4" fill="#F5F2EC"/>
-  <rect x="44" y="554" width="56" height="48" rx="2" fill="#C3D9F7" stroke="#8AB8E8" stroke-width="0.5"/>
-  <rect x="104" y="554" width="52" height="48" rx="2" fill="#FEF3C7" stroke="#F0C040" stroke-width="0.5"/>
-  <text x="174" y="570" font-family="Inter,sans-serif" font-size="11" fill="#8A857C">3 Bed · 2.5 Bath</text>
-  <text x="174" y="586" font-family="Inter,sans-serif" font-size="11" fill="#8A857C">Formal dining room</text>
-  <!-- Layout card 3 -->
-  <rect x="24" y="632" width="342" height="100" rx="12" fill="#FFFFFF" stroke="#E8E2D7" stroke-width="1"/>
-  <text x="40" y="654" font-family="Inter,sans-serif" font-size="13" fill="#4A4744" font-weight="600">Layout C — Score 81%</text>
-  <rect x="40" y="662" width="120" height="56" rx="4" fill="#F5F2EC"/>
-  <rect x="44" y="666" width="36" height="48" rx="2" fill="#D4EDE1" stroke="#60B080" stroke-width="0.5"/>
-  <rect x="84" y="666" width="72" height="48" rx="2" fill="#C3D9F7" stroke="#8AB8E8" stroke-width="0.5"/>
-  <text x="174" y="682" font-family="Inter,sans-serif" font-size="11" fill="#8A857C">4 Bed · 2 Bath</text>
-  <text x="174" y="698" font-family="Inter,sans-serif" font-size="11" fill="#8A857C">Compact utility core</text>
-  <rect x="155" y="828" width="80" height="4" rx="2" fill="#2A2825" opacity="0.2"/>
+  <rect width="390" height="844" fill="#F5F2EC"/>
+  <!-- Toolbar -->
+  <rect width="390" height="52" fill="#FFFFFF" stroke="#E5E0D8" stroke-width="0.5"/>
+  <text x="20" y="34" font-family="Inter,sans-serif" font-size="12" fill="#1C1917" font-weight="600">9:41</text>
+  <text x="20" y="34" font-family="Inter,sans-serif" font-size="24" fill="#1C1917">‹</text>
+  <text x="195" y="33" font-family="Inter,sans-serif" font-size="15" fill="#1C1917" font-weight="700" text-anchor="middle">Layout Generator</text>
+
+  <!-- Headline -->
+  <text x="24" y="94" font-family="Georgia,serif" font-size="26" fill="#1C1917" font-weight="700">Intelligent Layout</text>
+  <text x="24" y="122" font-family="Georgia,serif" font-size="26" fill="#1C1917" font-weight="700">Generator</text>
+  <text x="24" y="148" font-family="Inter,sans-serif" font-size="14" fill="#8A857C">Generate optimised floor plans from your requirements.</text>
+
+  <!-- Parameters card — white surface -->
+  <rect x="24" y="168" width="342" height="216" rx="12" fill="#FFFFFF" stroke="#E5E0D8" stroke-width="1"/>
+  <text x="40" y="198" font-family="Georgia,serif" font-size="18" fill="#1C1917" font-weight="700">Parameters</text>
+
+  <!-- Total sqft — underline input style -->
+  <text x="40" y="226" font-family="Inter,sans-serif" font-size="11" fill="#8A857C" font-weight="700" letter-spacing="1.2">TOTAL SQUARE FOOTAGE (SQ. FT.)</text>
+  <text x="40" y="250" font-family="Inter,sans-serif" font-size="16" fill="#1C1917">2500</text>
+  <line x1="40" y1="258" x2="348" y2="258" stroke="#E5E0D8" stroke-width="1"/>
+
+  <!-- Toggles — teak active -->
+  <text x="40" y="284" font-family="Inter,sans-serif" font-size="15" fill="#1C1917">Maximise Natural Light</text>
+  <rect x="294" y="272" width="44" height="24" rx="12" fill="#A06A3A"/>
+  <circle cx="326" cy="284" r="10" fill="#FFFFFF"/>
+  <text x="40" y="316" font-family="Inter,sans-serif" font-size="15" fill="#1C1917">Open Plan Layout</text>
+  <rect x="294" y="304" width="44" height="24" rx="12" fill="#E5E0D8"/>
+  <circle cx="306" cy="316" r="10" fill="#FFFFFF"/>
+
+  <!-- Layout typology pills -->
+  <rect x="40" y="340" width="88" height="28" rx="6" fill="#1C1917"/>
+  <text x="84" y="358" font-family="Inter,sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="600">Open Plan</text>
+  <rect x="136" y="340" width="88" height="28" rx="6" fill="#FFFFFF" stroke="#E5E0D8" stroke-width="1"/>
+  <text x="180" y="358" font-family="Inter,sans-serif" font-size="13" fill="#8A857C" text-anchor="middle">Traditional</text>
+
+  <!-- Generate button — TEAK (matches reference) -->
+  <rect x="24" y="396" width="342" height="52" rx="6" fill="#A06A3A"/>
+  <text x="195" y="427" font-family="Inter,sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="700" letter-spacing="0.5">✦  GENERATE LAYOUTS</text>
+
+  <!-- Layout Option A -->
+  <rect x="24" y="464" width="342" height="164" rx="12" fill="#FFFFFF" stroke="#E5E0D8" stroke-width="1"/>
+  <text x="40" y="490" font-family="Georgia,serif" font-size="18" fill="#1C1917" font-weight="700">Layout Option A</text>
+  <text x="40" y="508" font-family="Inter,sans-serif" font-size="11" fill="#8A857C">OPEN PLAN · 2500 SQ FT · SOUTH FACING</text>
+  <!-- Dark floor plan -->
+  <rect x="40" y="518" width="236" height="96" rx="4" fill="#3D3A37"/>
+  <!-- Room outlines in warm white -->
+  <rect x="48" y="526" width="80" height="50" rx="2" fill="none" stroke="#C4A882" stroke-width="1"/>
+  <rect x="133" y="526" width="56" height="50" rx="2" fill="none" stroke="#A89880" stroke-width="1"/>
+  <rect x="192" y="526" width="76" height="50" rx="2" fill="none" stroke="#C8A85A" stroke-width="1"/>
+  <rect x="48" y="580" width="88" height="28" rx="2" fill="none" stroke="#8CAE8C" stroke-width="1"/>
+  <rect x="139" y="580" width="128" height="28" rx="2" fill="none" stroke="#C4A882" stroke-width="1"/>
+  <!-- Stats chips -->
+  <rect x="284" y="518" width="64" height="20" rx="4" fill="#F5E8D4"/>
+  <text x="316" y="532" font-family="Inter,sans-serif" font-size="10" fill="#6B4226" text-anchor="middle" font-weight="600">3 Bed</text>
+  <rect x="284" y="542" width="64" height="20" rx="4" fill="#F5E8D4"/>
+  <text x="316" y="556" font-family="Inter,sans-serif" font-size="10" fill="#6B4226" text-anchor="middle" font-weight="600">3.5 Bath</text>
+  <rect x="284" y="566" width="64" height="20" rx="4" fill="#F5E8D4"/>
+  <text x="316" y="580" font-family="Inter,sans-serif" font-size="10" fill="#6B4226" text-anchor="middle" font-weight="600">S. Facing</text>
+  <!-- Score badge -->
+  <text x="348" y="490" font-family="Inter,sans-serif" font-size="13" fill="#2D7A4F" text-anchor="end" font-weight="700">Score 94%</text>
+  <!-- Actions -->
+  <rect x="40" y="626" width="100" height="36" rx="6" fill="#FFFFFF" stroke="#E5E0D8" stroke-width="1"/>
+  <text x="90" y="649" font-family="Inter,sans-serif" font-size="12" fill="#8A857C" text-anchor="middle">↺ Regenerate</text>
+  <rect x="152" y="626" width="108" height="36" rx="6" fill="#A06A3A"/>
+  <text x="206" y="649" font-family="Inter,sans-serif" font-size="12" fill="#FFF" text-anchor="middle" font-weight="700">Save Layout</text>
+
+  <!-- Layout Option B (partial) -->
+  <rect x="24" y="640" width="342" height="100" rx="12" fill="#FFFFFF" stroke="#E5E0D8" stroke-width="1"/>
+  <text x="40" y="666" font-family="Georgia,serif" font-size="16" fill="#1C1917" font-weight="700">Layout Option B</text>
+  <text x="40" y="682" font-family="Inter,sans-serif" font-size="11" fill="#8A857C">TRADITIONAL · 2500 SQ FT</text>
+  <text x="330" y="666" font-family="Inter,sans-serif" font-size="13" fill="#2D7A4F" text-anchor="end" font-weight="700">87%</text>
+  <rect x="40" y="694" width="170" height="34" rx="4" fill="#3D3A37"/>
+
+  <rect x="155" y="828" width="80" height="4" rx="2" fill="#1C1917" opacity="0.15"/>
 </svg>

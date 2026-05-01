@@ -1,57 +1,80 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" width="390" height="844">
-  <rect width="390" height="844" fill="#FBFAF7"/>
-  <rect width="390" height="52" fill="#2A2825"/>
-  <text x="20" y="58" font-family="Inter,sans-serif" font-size="12" fill="#FBFAF7" font-weight="600">9:41</text>
-  <text x="20" y="34" font-family="Inter,sans-serif" font-size="22" fill="#FBFAF7">‹</text>
-  <text x="195" y="34" font-family="Inter,sans-serif" font-size="15" fill="#FBFAF7" font-weight="600" text-anchor="middle">Living Room Finishes</text>
-  <!-- Sheet handle -->
-  <rect x="175" y="64" width="40" height="4" rx="2" fill="#C4C0BA"/>
-  <!-- Section: Floor Finish -->
-  <text x="24" y="100" font-family="Inter,sans-serif" font-size="13" fill="#4A4744" font-weight="600">FLOOR</text>
-  <!-- Tile cards row -->
-  <rect x="24" y="110" width="96" height="80" rx="10" fill="#FFFFFF" stroke="#1E6FD9" stroke-width="2"/>
-  <rect x="24" y="110" width="96" height="54" rx="10" fill="#E8E0D0"/>
-  <text x="72" y="200" font-family="Inter,sans-serif" font-size="11" fill="#2A2825" text-anchor="middle" font-weight="600">Vitrified Tile</text>
-  <circle cx="96" cy="118" r="8" fill="#1E6FD9"/>
-  <text x="96" y="123" font-family="Inter,sans-serif" font-size="9" fill="#FFF" text-anchor="middle">✓</text>
+  <rect width="390" height="844" fill="#F5F2EC"/>
+  <!-- Bottom sheet handle -->
+  <rect x="175" y="12" width="40" height="4" rx="2" fill="#E5E0D8"/>
 
-  <rect x="130" y="110" width="96" height="80" rx="10" fill="#FFFFFF" stroke="#E8E2D7" stroke-width="1"/>
-  <rect x="130" y="110" width="96" height="54" rx="10" fill="#F0EBE0"/>
-  <text x="178" y="200" font-family="Inter,sans-serif" font-size="11" fill="#2A2825" text-anchor="middle">Italian Marble</text>
+  <!-- Title area -->
+  <text x="24" y="48" font-family="Inter,sans-serif" font-size="11" fill="#8A857C" font-weight="700" letter-spacing="1.5">LIVING AREA</text>
+  <text x="24" y="84" font-family="Georgia,serif" font-size="28" fill="#1C1917" font-weight="700">Wall Surface</text>
+  <text x="24" y="110" font-family="Inter,sans-serif" font-size="14" fill="#8A857C">Select a material to apply to this surface.</text>
+  <line x1="0" y1="130" x2="390" y2="130" stroke="#E5E0D8" stroke-width="1"/>
 
-  <rect x="236" y="110" width="96" height="80" rx="10" fill="#FFFFFF" stroke="#E8E2D7" stroke-width="1"/>
-  <rect x="236" y="110" width="96" height="54" rx="10" fill="#D4C5B0"/>
-  <text x="284" y="200" font-family="Inter,sans-serif" font-size="11" fill="#2A2825" text-anchor="middle">Granite</text>
-  <!-- Section: Wall Finish -->
-  <text x="24" y="226" font-family="Inter,sans-serif" font-size="13" fill="#4A4744" font-weight="600">WALLS</text>
-  <rect x="24" y="236" width="96" height="80" rx="10" fill="#FFFFFF" stroke="#E8E2D7" stroke-width="1"/>
-  <rect x="24" y="236" width="96" height="54" rx="10" fill="#F0ECE6"/>
-  <text x="72" y="326" font-family="Inter,sans-serif" font-size="11" fill="#2A2825" text-anchor="middle">Plaster &amp; Paint</text>
+  <!-- MOST USED section -->
+  <text x="24" y="158" font-family="Inter,sans-serif" font-size="11" fill="#8A857C" font-weight="700" letter-spacing="1.5">MOST USED</text>
 
-  <rect x="130" y="236" width="96" height="80" rx="10" fill="#FFFFFF" stroke="#1E6FD9" stroke-width="2"/>
-  <rect x="130" y="236" width="96" height="54" rx="10" fill="#8B6914" opacity="0.4"/>
-  <text x="178" y="326" font-family="Inter,sans-serif" font-size="11" fill="#2A2825" text-anchor="middle" font-weight="600">Teak Panel</text>
-  <circle cx="202" cy="244" r="8" fill="#1E6FD9"/>
-  <text x="202" y="249" font-family="Inter,sans-serif" font-size="9" fill="#FFF" text-anchor="middle">✓</text>
+  <!-- Carrara Marble — SELECTED, teak border -->
+  <rect x="24" y="170" width="162" height="136" rx="10" fill="#FFFFFF" stroke="#A06A3A" stroke-width="2"/>
+  <!-- Marble texture simulation -->
+  <rect x="24" y="170" width="162" height="100" rx="10" fill="#EDE8E0"/>
+  <line x1="60"  y1="170" x2="40"  y2="270" stroke="#C4BEB4" stroke-width="1.5" opacity="0.6"/>
+  <line x1="100" y1="170" x2="75"  y2="270" stroke="#C4BEB4" stroke-width="1"   opacity="0.4"/>
+  <line x1="140" y1="170" x2="120" y2="270" stroke="#C4BEB4" stroke-width="1.5" opacity="0.6"/>
+  <!-- Teak checkmark -->
+  <circle cx="170" cy="182" r="12" fill="#A06A3A"/>
+  <text x="170" y="187" font-family="Inter,sans-serif" font-size="11" fill="#FFF" text-anchor="middle" font-weight="700">✓</text>
+  <text x="40" y="286" font-family="Inter,sans-serif" font-size="15" fill="#1C1917" font-weight="700">Carrara Marble</text>
+  <text x="40" y="302" font-family="Inter,sans-serif" font-size="12" fill="#8A857C">Natural Stone</text>
 
-  <rect x="236" y="236" width="96" height="80" rx="10" fill="#FFFFFF" stroke="#E8E2D7" stroke-width="1"/>
-  <rect x="236" y="236" width="96" height="54" rx="10" fill="#EADFC8"/>
-  <text x="284" y="326" font-family="Inter,sans-serif" font-size="11" fill="#2A2825" text-anchor="middle">Wallpaper</text>
-  <!-- Section: Paint -->
-  <text x="24" y="352" font-family="Inter,sans-serif" font-size="13" fill="#4A4744" font-weight="600">PAINT COLOUR</text>
-  <circle cx="48" cy="382" r="20" fill="#FBFAF7" stroke="#E8E2D7" stroke-width="1.5"/>
-  <circle cx="96" cy="382" r="20" fill="#EDE8DE" stroke="#E8E2D7" stroke-width="1.5"/>
-  <circle cx="144" cy="382" r="20" fill="#C3D9F7" stroke="#1E6FD9" stroke-width="2"/>
-  <circle cx="192" cy="382" r="20" fill="#FEF3C7"/>
-  <circle cx="240" cy="382" r="20" fill="#D4EDE1"/>
-  <circle cx="288" cy="382" r="20" fill="#F3E8FF"/>
-  <text x="144" y="416" font-family="Inter,sans-serif" font-size="11" fill="#1E6FD9" text-anchor="middle" font-weight="600">Selected</text>
-  <!-- Cost impact footer -->
-  <rect x="0" y="720" width="390" height="124" fill="#2A2825" rx="0"/>
-  <text x="24" y="752" font-family="Inter,sans-serif" font-size="13" fill="#8A857C">Cost impact of selections</text>
-  <text x="24" y="782" font-family="Georgia,serif" font-size="22" fill="#FBFAF7" font-weight="600">+₹3,24,000</text>
-  <text x="24" y="804" font-family="Inter,sans-serif" font-size="13" fill="#8A857C">vs. standard finish baseline</text>
-  <rect x="258" y="730" width="108" height="44" rx="10" fill="#1E6FD9"/>
-  <text x="312" y="757" font-family="Inter,sans-serif" font-size="14" fill="#FFF" text-anchor="middle" font-weight="600">Apply</text>
-  <rect x="155" y="836" width="80" height="4" rx="2" fill="#FBFAF7" opacity="0.15"/>
+  <!-- Light Oak -->
+  <rect x="204" y="170" width="162" height="136" rx="10" fill="#FFFFFF" stroke="#E5E0D8" stroke-width="1"/>
+  <rect x="204" y="170" width="162" height="100" rx="10" fill="#D4A574"/>
+  <!-- Wood grain lines -->
+  <line x1="204" y1="190" x2="366" y2="192" stroke="#C09060" stroke-width="2" opacity="0.5"/>
+  <line x1="204" y1="210" x2="366" y2="212" stroke="#C09060" stroke-width="2" opacity="0.5"/>
+  <line x1="204" y1="230" x2="366" y2="232" stroke="#C09060" stroke-width="2" opacity="0.5"/>
+  <line x1="204" y1="250" x2="366" y2="252" stroke="#C09060" stroke-width="2" opacity="0.5"/>
+  <text x="220" y="286" font-family="Inter,sans-serif" font-size="15" fill="#1C1917" font-weight="700">Light Oak</text>
+  <text x="220" y="302" font-family="Inter,sans-serif" font-size="12" fill="#8A857C">Wood</text>
+
+  <!-- PREMIUM section -->
+  <view x="24" y="322"/>
+  <text x="24" y="334" font-family="Inter,sans-serif" font-size="11" fill="#8A857C" font-weight="700" letter-spacing="1.5">PREMIUM</text>
+  <text x="88" y="334" font-family="Inter,sans-serif" font-size="12" fill="#A06A3A">★</text>
+
+  <!-- Brushed Brass -->
+  <rect x="24" y="346" width="162" height="136" rx="10" fill="#FFFFFF" stroke="#E5E0D8" stroke-width="1"/>
+  <defs>
+    <linearGradient id="brassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"  stop-color="#D4A842"/>
+      <stop offset="50%" stop-color="#B8941E"/>
+      <stop offset="100%" stop-color="#8B6914"/>
+    </linearGradient>
+  </defs>
+  <rect x="24" y="346" width="162" height="100" rx="10" fill="url(#brassGrad)"/>
+  <text x="40" y="462" font-family="Inter,sans-serif" font-size="15" fill="#1C1917" font-weight="700">Brushed Brass</text>
+  <text x="40" y="478" font-family="Inter,sans-serif" font-size="12" fill="#8A857C">Metal</text>
+
+  <!-- Smoked Oak -->
+  <rect x="204" y="346" width="162" height="136" rx="10" fill="#FFFFFF" stroke="#E5E0D8" stroke-width="1"/>
+  <rect x="204" y="346" width="162" height="100" rx="10" fill="#4A3020"/>
+  <line x1="204" y1="366" x2="366" y2="368" stroke="#3A2010" stroke-width="3" opacity="0.6"/>
+  <line x1="204" y1="390" x2="366" y2="392" stroke="#3A2010" stroke-width="3" opacity="0.6"/>
+  <line x1="204" y1="414" x2="366" y2="416" stroke="#3A2010" stroke-width="3" opacity="0.6"/>
+  <line x1="204" y1="438" x2="366" y2="440" stroke="#3A2010" stroke-width="3" opacity="0.6"/>
+  <text x="220" y="462" font-family="Inter,sans-serif" font-size="15" fill="#1C1917" font-weight="700">Smoked Oak</text>
+  <text x="220" y="478" font-family="Inter,sans-serif" font-size="12" fill="#8A857C">Wood</text>
+
+  <!-- Polished Concrete (partial card) -->
+  <rect x="24" y="530" width="162" height="60" rx="10" fill="#FFFFFF" stroke="#E5E0D8" stroke-width="1"/>
+  <rect x="24" y="530" width="162" height="60" rx="10" fill="#C8C4C0"/>
+  <text x="24" y="614" font-family="Inter,sans-serif" font-size="14" fill="#1C1917" font-weight="600">Polished Concrete</text>
+
+  <!-- Cost impact footer — dark -->
+  <rect x="0" y="730" width="390" height="114" fill="#1C1917"/>
+  <text x="24" y="758" font-family="Inter,sans-serif" font-size="11" fill="#8A857C" letter-spacing="1.5">ESTIMATED SURFACE IMPACT</text>
+  <text x="24" y="792" font-family="Georgia,serif" font-size="26" fill="#F5F2EC" font-weight="700">+₹32,000</text>
+  <text x="24" y="814" font-family="Inter,sans-serif" font-size="13" fill="#8A857C">vs. standard plaster baseline</text>
+  <rect x="252" y="740" width="114" height="44" rx="6" fill="#A06A3A"/>
+  <text x="309" y="767" font-family="Inter,sans-serif" font-size="12" fill="#FFF" text-anchor="middle" font-weight="700" letter-spacing="0.5">APPLY →</text>
+  <rect x="155" y="836" width="80" height="4" rx="2" fill="#F5F2EC" opacity="0.15"/>
 </svg>

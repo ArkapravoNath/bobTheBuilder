@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1284 2778" width="1284" height="2778">
+  <!-- Off-white background matching design system -->
+  <rect width="1284" height="2778" fill="#F5F2EC"/>
+
+  <!-- Centered logo container -->
+  <g transform="translate(642, 1389)">
+    <!-- Logo background circle (matches the app icon feel) -->
+    <rect x="-120" y="-120" width="240" height="240" rx="52" fill="#FFFFFF"
+          filter="url(#shadow)"/>
+
+    <!-- Build Buddy wordmark below -->
+    <text x="0" y="168" font-family="Georgia,serif" font-size="32" fill="#2A2825"
+          text-anchor="middle" font-weight="700" letter-spacing="2">BUILD BUDDY</text>
+    <text x="0" y="200" font-family="Inter,sans-serif" font-size="18" fill="#8A857C"
+          text-anchor="middle">Design your home. Know the cost.</text>
+  </g>
+
+  <!-- Subtle bottom brand mark -->
+  <text x="642" y="2720" font-family="Inter,sans-serif" font-size="20" fill="#C4C0BA"
+        text-anchor="middle" letter-spacing="1">India-only MVP · ₹ INR</text>
+
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#1C1917" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+</svg>

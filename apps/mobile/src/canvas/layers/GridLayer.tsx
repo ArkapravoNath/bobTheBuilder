@@ -1,6 +1,6 @@
 import React from 'react';
-import { Path, Skia, useDerivedValue } from '@shopify/react-native-skia';
-import type { SharedValue } from 'react-native-reanimated';
+import { Path, Skia } from '@shopify/react-native-skia';
+import { useDerivedValue, type SharedValue } from 'react-native-reanimated';
 import {
   GRID_MAJOR_IN,
   GRID_MINOR_IN,

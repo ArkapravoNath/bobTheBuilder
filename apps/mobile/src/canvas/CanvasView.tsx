@@ -1,7 +1,8 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import { Canvas, Group, useDerivedValue } from '@shopify/react-native-skia';
+import { Canvas, Group } from '@shopify/react-native-skia';
 import { GestureDetector } from 'react-native-gesture-handler';
+import { useDerivedValue } from 'react-native-reanimated';
 import { GridLayer } from './layers/GridLayer';
 import { RulerOverlay } from './layers/RulerOverlay';
 import { FloorTabs } from './floor/FloorTabs';

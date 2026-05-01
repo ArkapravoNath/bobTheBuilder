@@ -1,16 +1,18 @@
 import React from 'react';
-import { TouchableOpacity, Text, ActivityIndicator, StyleSheet, ViewStyle, TextStyle } from 'react-native';
+import { TouchableOpacity, Text, ActivityIndicator, StyleSheet, ViewStyle } from 'react-native';
+import { C } from '../theme/colors';
 
-type Variant = 'primary' | 'secondary' | 'ghost';
+export type BuddyButtonVariant = 'primary' | 'secondary' | 'teak' | 'ghost';
 
 interface Props {
   label: string;
   onPress: () => void;
-  variant?: Variant;
+  variant?: BuddyButtonVariant;
   disabled?: boolean;
   loading?: boolean;
   fullWidth?: boolean;
   style?: ViewStyle;
+  uppercase?: boolean;
 }
 
 export function BuddyButton({
@@ -21,44 +23,48 @@ export function BuddyButton({
   loading = false,
   fullWidth = false,
   style,
+  uppercase = false,
 }: Props) {
   const isDisabled = disabled || loading;
 
-  const containerStyles: ViewStyle[] = [
-    styles.base,
-    variant === 'primary' && styles.primary,
-    variant === 'secondary' && styles.secondary,
-    variant === 'ghost' && styles.ghost,
-    fullWidth && styles.fullWidth,
-    isDisabled && styles.disabled,
-    style as ViewStyle,
-  ].filter(Boolean) as ViewStyle[];
-
-  const textStyles: TextStyle[] = [
-    styles.label,
-    variant === 'primary' && styles.labelPrimary,
-    variant === 'secondary' && styles.labelSecondary,
-    variant === 'ghost' && styles.labelGhost,
-    isDisabled && styles.labelDisabled,
-  ].filter(Boolean) as TextStyle[];
-
   return (
     <TouchableOpacity
-      style={containerStyles}
+      style={[
+        styles.base,
+        variant === 'primary'   && styles.primary,
+        variant === 'secondary' && styles.secondary,
+        variant === 'teak'      && styles.teak,
+        variant === 'ghost'     && styles.ghost,
+        fullWidth && styles.fullWidth,
+        isDisabled && styles.disabled,
+        style as ViewStyle,
+      ].filter(Boolean)}
       onPress={onPress}
       disabled={isDisabled}
       accessibilityRole="button"
       accessibilityLabel={label}
       accessibilityState={{ disabled: isDisabled }}
-      activeOpacity={0.8}
+      activeOpacity={0.82}
     >
       {loading ? (
         <ActivityIndicator
           size="small"
-          color={variant === 'primary' ? '#FFFFFF' : '#1E6FD9'}
+          color={variant === 'primary' || variant === 'teak' ? '#FFFFFF' : C.ink}
         />
       ) : (
-        <Text style={textStyles}>{label}</Text>
+        <Text
+          style={[
+            styles.label,
+            variant === 'primary'   && styles.labelPrimary,
+            variant === 'secondary' && styles.labelSecondary,
+            variant === 'teak'      && styles.labelTeak,
+            variant === 'ghost'     && styles.labelGhost,
+            uppercase && styles.labelUpper,
+            isDisabled && styles.labelDisabled,
+          ].filter(Boolean)}
+        >
+          {label}
+        </Text>
       )}
     </TouchableOpacity>
   );
@@ -67,44 +73,28 @@ export function BuddyButton({
 const styles = StyleSheet.create({
   base: {
     height: 52,
-    borderRadius: 12,
+    borderRadius: 6,
     justifyContent: 'center',
     alignItems: 'center',
     paddingHorizontal: 24,
-    minWidth: 120,
+    minWidth: 100,
   },
-  primary: {
-    backgroundColor: '#1E6FD9',
-  },
+  primary: { backgroundColor: C.cta },
   secondary: {
     backgroundColor: 'transparent',
-    borderWidth: 1.5,
-    borderColor: '#1E6FD9',
+    borderWidth: 1,
+    borderColor: C.border,
   },
-  ghost: {
-    backgroundColor: 'transparent',
-  },
-  fullWidth: {
-    width: '100%',
-  },
-  disabled: {
-    opacity: 0.4,
-  },
-  label: {
-    fontSize: 16,
-    fontWeight: '600',
-    letterSpacing: 0.2,
-  },
-  labelPrimary: {
-    color: '#FFFFFF',
-  },
-  labelSecondary: {
-    color: '#1E6FD9',
-  },
-  labelGhost: {
-    color: '#1E6FD9',
-  },
-  labelDisabled: {
-    color: '#8A857C',
-  },
+  teak: { backgroundColor: C.teak },
+  ghost: { backgroundColor: 'transparent' },
+  fullWidth: { width: '100%' },
+  disabled: { opacity: 0.38 },
+
+  label: { fontSize: 15, fontWeight: '600', letterSpacing: 0.3 },
+  labelPrimary:   { color: '#FFFFFF' },
+  labelSecondary: { color: C.ink },
+  labelTeak:      { color: '#FFFFFF' },
+  labelGhost:     { color: C.teak },
+  labelUpper:     { textTransform: 'uppercase', letterSpacing: 1.2, fontSize: 13 },
+  labelDisabled:  { color: C.muted },
 });

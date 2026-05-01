@@ -22,6 +22,22 @@ const ARCHETYPE_ICONS: Record<string, string> = {
   mansion: '🏰',
 };
 
+const LOCAL_DEV_DESIGNS: Design[] = [
+  {
+    id: 'dev-demo-house',
+    name: 'Dev Demo House',
+    archetype: 'full_house',
+    status: 'draft',
+    location: { city: 'Mumbai' },
+    floors: [
+      { index: 0, label: 'Ground Floor', heightFt: 10, rooms: [], stairs: [] },
+      { index: 1, label: 'First Floor', heightFt: 10, rooms: [], stairs: [] },
+    ],
+    createdAt: '2026-01-01T00:00:00.000Z',
+    updatedAt: '2026-01-01T00:00:00.000Z',
+  } as unknown as Design,
+];
+
 export default function DesignsScreen() {
   const router = useRouter();
   const { user, token, signOut } = useAuth();
@@ -31,11 +47,16 @@ export default function DesignsScreen() {
   const [error, setError] = useState('');
 
   const API_BASE = process.env.EXPO_PUBLIC_API_URL ?? 'http://10.0.2.2:4000';
+  const isLocalDevSession = token?.startsWith('dev-token-local') ?? false;
 
   async function fetchDesigns(silent = false) {
     if (!silent) setLoading(true);
     setError('');
     try {
+      if (isLocalDevSession) {
+        setDesigns(LOCAL_DEV_DESIGNS);
+        return;
+      }
       const res = await fetch(`${API_BASE}/v1/designs`, {
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -55,6 +76,10 @@ export default function DesignsScreen() {
   function onRefresh() {
     setRefreshing(true);
     fetchDesigns(true);
+  }
+
+  function startNewDesign() {
+    router.push(`/(app)/canvas/local-${Date.now()}`);
   }
 
   return (
@@ -91,7 +116,7 @@ export default function DesignsScreen() {
         </View>
         <BuddyButton
           label="+ New"
-          onPress={() => router.push('/(app)/canvas/__demo__')}
+          onPress={startNewDesign}
           variant="primary"
           style={styles.newBtn}
         />

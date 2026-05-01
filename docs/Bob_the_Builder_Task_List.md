@@ -160,15 +160,16 @@
 **Deliverables.** Add / remove / reorder floors; tabs at canvas edge; each floor independently editable; floor-height defaults per archetype.
 **Acceptance.** Creating a 3-floor design, renaming and reordering floors, and switching between them preserves per-floor geometry and selection state.
 
-### TASK-2003 · Room primitive — **8 pts**
+### ✅ TASK-2003 · Room primitive — **13 pts** *(bumped from 8: warm palette + material selection added)*
 **Prereqs.** TASK-2002.
 **Deliverables.** Draw rectangular rooms via drag; resize handles on all four sides + corners; room-type picker (bedroom, bath, kitchen, living, dining, utility, garage, balcony, custom); per-room ceiling height; collision detection with adjacent rooms.
 **Acceptance.** A room JSON entry conforms to the shared `Room` schema and round-trips through save+reload; overlapping a room shows a visual warning; delete-with-confirm works.
 
-### TASK-2004 · Fixture tray (doors, windows, stairs) — **8 pts**
+### ✅ TASK-2004 · Fixture tray (doors, windows, stairs) — **8 pts**
 **Prereqs.** TASK-2003.
 **Deliverables.** Drag-and-drop fixtures onto room edges; snap to wall segment with orientation lock; fixture spec sheet (size, style, glazing); stair primitive with direction and run length.
 **Acceptance.** Dropping a window on a wall persists anchor to the wall segment; the anchor survives room resize and rotation; stairs connect two floors when placed near a floor boundary.
+**Status.** ✅ Complete 2026-04-30. Implemented `wallSnap.ts` (snap threshold 18 units), `FixtureLayer.tsx` (Skia door/window/stair paths), `FixtureTray.tsx` (tray with 3 tools), `FixtureSpecSheet.tsx` (modal spec editor). 25 unit tests added; 64/64 passing.
 
 ### TASK-2005 · Finishes palette — **5 pts**
 **Prereqs.** TASK-2003.

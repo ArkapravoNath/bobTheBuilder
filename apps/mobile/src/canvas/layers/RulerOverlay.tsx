@@ -5,9 +5,8 @@ import {
   Skia,
   Text,
   matchFont,
-  useDerivedValue,
 } from '@shopify/react-native-skia';
-import { useAnimatedReaction, runOnJS } from 'react-native-reanimated';
+import { useAnimatedReaction, runOnJS, useDerivedValue } from 'react-native-reanimated';
 import type { SharedValue } from 'react-native-reanimated';
 import {
   RULER_SIZE,
@@ -41,7 +40,7 @@ const LABEL_INTERVAL = 120;
 // ── Tick paths (UI-thread via Skia useDerivedValue) ───────────────────────────
 
 export function RulerOverlay({ tx, ty, scale, screenW, screenH }: Props) {
-  const font = matchFont({ familyName: 'System', fontSize: RULER_LABEL_SIZE });
+  const font = matchFont({ fontFamily: 'System', fontSize: RULER_LABEL_SIZE });
 
   // ── Horizontal ticks ──────────────────────────────────────────────────────
   const hTickPath = useDerivedValue(() => {

@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import * as SecureStore from 'expo-secure-store';
+import { Platform } from 'react-native';
 import type { User } from '@bob/shared-schemas';
 
 const TOKEN_KEY = 'buildbuddy_auth_token';
@@ -7,6 +8,8 @@ const USER_KEY = 'buildbuddy_auth_user';
 
 const API_BASE =
   process.env.EXPO_PUBLIC_API_URL ?? 'http://10.0.2.2:4000';
+
+export type DevLoginProfile = 'designer' | 'onboarding';
 
 interface AuthContextValue {
   user: User | null;
@@ -17,9 +20,57 @@ interface AuthContextValue {
   signOut: () => Promise<void>;
   requestReset: (email: string) => Promise<void>;
   refreshUser: () => Promise<void>;
+  /** Dev-only: instantly authenticates without the mock API. */
+  devLogin: (profile?: DevLoginProfile) => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextValue | null>(null);
+
+const DEV_USERS: Record<DevLoginProfile, User> = {
+  designer: {
+    id: 'dev-user-001',
+    email: 'dev@buildbuddy.app',
+    displayName: 'Dev Designer',
+    onboardingComplete: true,
+    archetype: 'full_house',
+    location: 'Mumbai',
+    createdAt: '2026-01-01T00:00:00.000Z',
+  } as unknown as User,
+  onboarding: {
+    id: 'dev-user-002',
+    email: 'onboarding@buildbuddy.app',
+    displayName: 'Dev Onboarding',
+    onboardingComplete: false,
+    createdAt: '2026-01-01T00:00:00.000Z',
+  } as unknown as User,
+};
+
+function canUseBrowserStorage() {
+  return Platform.OS === 'web' && typeof window !== 'undefined' && !!window.localStorage;
+}
+
+async function getStoredItem(key: string) {
+  if (canUseBrowserStorage()) {
+    return window.localStorage.getItem(key);
+  }
+  return SecureStore.getItemAsync(key);
+}
+
+async function setStoredItem(key: string, value: string) {
+  if (canUseBrowserStorage()) {
+    window.localStorage.setItem(key, value);
+    return;
+  }
+  await SecureStore.setItemAsync(key, value);
+}
+
+async function deleteStoredItem(key: string) {
+  if (canUseBrowserStorage()) {
+    window.localStorage.removeItem(key);
+    return;
+  }
+  await SecureStore.deleteItemAsync(key);
+}
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
@@ -33,8 +84,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   async function restoreSession() {
     try {
       const [storedToken, storedUser] = await Promise.all([
-        SecureStore.getItemAsync(TOKEN_KEY),
-        SecureStore.getItemAsync(USER_KEY),
+        getStoredItem(TOKEN_KEY),
+        getStoredItem(USER_KEY),
       ]);
       if (storedToken && storedUser) {
         setToken(storedToken);
@@ -50,8 +101,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   async function persistSession(t: string, u: User) {
     await Promise.all([
-      SecureStore.setItemAsync(TOKEN_KEY, t),
-      SecureStore.setItemAsync(USER_KEY, JSON.stringify(u)),
+      setStoredItem(TOKEN_KEY, t),
+      setStoredItem(USER_KEY, JSON.stringify(u)),
     ]);
     setToken(t);
     setUser(u);
@@ -59,8 +110,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   async function clearSession() {
     await Promise.all([
-      SecureStore.deleteItemAsync(TOKEN_KEY),
-      SecureStore.deleteItemAsync(USER_KEY),
+      deleteStoredItem(TOKEN_KEY),
+      deleteStoredItem(USER_KEY),
     ]);
     setToken(null);
     setUser(null);
@@ -98,6 +149,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     await new Promise((r) => setTimeout(r, 600));
   }
 
+  async function devLogin(profile: DevLoginProfile = 'designer') {
+    await persistSession(`dev-token-local-${profile}`, DEV_USERS[profile]);
+  }
+
   async function refreshUser() {
     if (!token) return;
     try {
@@ -106,7 +161,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       });
       if (res.ok) {
         const { data } = (await res.json()) as { data: User };
-        await SecureStore.setItemAsync(USER_KEY, JSON.stringify(data));
+        await setStoredItem(USER_KEY, JSON.stringify(data));
         setUser(data);
       }
     } catch {
@@ -115,7 +170,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <AuthContext.Provider value={{ user, token, isLoading, signIn, signUp, signOut, requestReset, refreshUser }}>
+    <AuthContext.Provider value={{ user, token, isLoading, signIn, signUp, signOut, requestReset, refreshUser, devLogin }}>
       {children}
     </AuthContext.Provider>
   );

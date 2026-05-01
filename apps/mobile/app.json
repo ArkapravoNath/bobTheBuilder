@@ -34,7 +34,6 @@
     "plugins": [
       "expo-router",
       "expo-secure-store",
-      "@shopify/react-native-skia",
       [
         "expo-splash-screen",
         {

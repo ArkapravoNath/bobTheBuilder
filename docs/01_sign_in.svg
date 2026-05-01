@@ -1,47 +1,72 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" width="390" height="844">
-  <defs>
-    <linearGradient id="bg01" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#FBFAF7"/>
-      <stop offset="100%" stop-color="#F5F2EC"/>
-    </linearGradient>
-  </defs>
-  <!-- Background -->
-  <rect width="390" height="844" fill="url(#bg01)"/>
+  <!-- Cream background -->
+  <rect width="390" height="844" fill="#F5F2EC"/>
   <!-- Status bar -->
-  <rect width="390" height="44" fill="#FBFAF7"/>
-  <text x="20" y="30" font-family="Inter,sans-serif" font-size="12" fill="#2A2825" font-weight="600">9:41</text>
-  <text x="340" y="30" font-family="Inter,sans-serif" font-size="11" fill="#2A2825">●●●</text>
-  <!-- Brand pill -->
-  <rect x="24" y="72" width="120" height="22" rx="3" fill="#2A2825"/>
-  <text x="34" y="87" font-family="Inter,sans-serif" font-size="10" fill="#FBFAF7" font-weight="700" letter-spacing="2.5">BUILD BUDDY</text>
+  <text x="20" y="34" font-family="Inter,sans-serif" font-size="12" fill="#1C1917" font-weight="600">9:41</text>
+  <text x="350" y="34" font-family="Inter,sans-serif" font-size="11" fill="#8A857C">●●●</text>
+
+  <!-- Logo -->
+  <image href="../apps/mobile/assets/brand/logo.png" x="159" y="56" width="72" height="72" preserveAspectRatio="xMidYMid meet"/>
+  <!-- Logo fallback rounded rect -->
+  <rect x="159" y="56" width="72" height="72" rx="16" fill="#F5E8D4" opacity="0.4"/>
+  <text x="195" y="100" font-family="Georgia,serif" font-size="28" fill="#A06A3A" text-anchor="middle">B</text>
+
+  <!-- White card -->
+  <rect x="20" y="152" width="350" height="596" rx="16" fill="#FFFFFF"
+        filter="url(#cardShadow)"/>
+  <defs>
+    <filter id="cardShadow" x="-5%" y="-2%" width="110%" height="108%">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="#1C1917" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
   <!-- Headline -->
-  <text x="24" y="136" font-family="Georgia,serif" font-size="38" fill="#2A2825" font-weight="600">Welcome</text>
-  <text x="24" y="174" font-family="Georgia,serif" font-size="38" fill="#2A2825" font-weight="600">back</text>
-  <text x="24" y="210" font-family="Inter,sans-serif" font-size="15" fill="#8A857C">Sign in to continue designing.</text>
-  <!-- Email field -->
-  <text x="24" y="260" font-family="Inter,sans-serif" font-size="13" fill="#4A4744" font-weight="500">Email</text>
-  <rect x="24" y="268" width="342" height="52" rx="10" fill="#FFFFFF" stroke="#E8E2D7" stroke-width="1.5"/>
-  <text x="40" y="299" font-family="Inter,sans-serif" font-size="16" fill="#C4C0BA">you@example.com</text>
-  <!-- Password field -->
-  <text x="24" y="344" font-family="Inter,sans-serif" font-size="13" fill="#4A4744" font-weight="500">Password</text>
-  <rect x="24" y="352" width="342" height="52" rx="10" fill="#FFFFFF" stroke="#E8E2D7" stroke-width="1.5"/>
-  <text x="40" y="383" font-family="Inter,sans-serif" font-size="16" fill="#C4C0BA">Your password</text>
-  <text x="318" y="383" font-family="Inter,sans-serif" font-size="13" fill="#8A857C">Show</text>
-  <!-- Sign In button -->
-  <rect x="24" y="428" width="342" height="52" rx="12" fill="#1E6FD9"/>
-  <text x="195" y="459" font-family="Inter,sans-serif" font-size="16" fill="#FFFFFF" font-weight="600" text-anchor="middle">Sign In</text>
-  <!-- Forgot password -->
-  <text x="195" y="510" font-family="Inter,sans-serif" font-size="14" fill="#1E6FD9" text-anchor="middle" font-weight="500">Forgot your password?</text>
+  <text x="195" y="204" font-family="Georgia,serif" font-size="28" fill="#1C1917" text-anchor="middle" font-weight="700">Sign In</text>
+  <text x="195" y="228" font-family="Inter,sans-serif" font-size="14" fill="#8A857C" text-anchor="middle">Welcome back to your design workspace.</text>
+
+  <!-- EMAIL label + underline input -->
+  <text x="44" y="268" font-family="Inter,sans-serif" font-size="11" fill="#8A857C" font-weight="700" letter-spacing="1.2">EMAIL ADDRESS</text>
+  <text x="44" y="294" font-family="Inter,sans-serif" font-size="16" fill="#C4C0BA">Enter your email</text>
+  <line x1="44" y1="304" x2="346" y2="304" stroke="#E5E0D8" stroke-width="1"/>
+
+  <!-- PASSWORD label + underline input -->
+  <text x="44" y="334" font-family="Inter,sans-serif" font-size="11" fill="#8A857C" font-weight="700" letter-spacing="1.2">PASSWORD</text>
+  <text x="44" y="360" font-family="Inter,sans-serif" font-size="16" fill="#C4C0BA">Enter your password</text>
+  <!-- Eye icon -->
+  <text x="330" y="360" font-family="Inter,sans-serif" font-size="16" fill="#8A857C">◌</text>
+  <line x1="44" y1="370" x2="346" y2="370" stroke="#E5E0D8" stroke-width="1"/>
+
+  <!-- Forgot password (right-aligned, teak) -->
+  <text x="346" y="396" font-family="Inter,sans-serif" font-size="13" fill="#A06A3A" text-anchor="end" font-weight="500">Forgot password?</text>
+
+  <!-- SIGN IN button — dark charcoal -->
+  <rect x="44" y="414" width="302" height="52" rx="6" fill="#1C1917"/>
+  <text x="195" y="445" font-family="Inter,sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="700" letter-spacing="1.2">SIGN IN</text>
+
   <!-- Divider -->
-  <line x1="24" y1="560" x2="172" y2="560" stroke="#E8E2D7" stroke-width="1"/>
-  <text x="195" y="565" font-family="Inter,sans-serif" font-size="13" fill="#C4C0BA" text-anchor="middle">or</text>
-  <line x1="218" y1="560" x2="366" y2="560" stroke="#E8E2D7" stroke-width="1"/>
+  <line x1="44" y1="494" x2="155" y2="494" stroke="#E5E0D8" stroke-width="1"/>
+  <text x="195" y="498" font-family="Inter,sans-serif" font-size="11" fill="#8A857C" text-anchor="middle" font-weight="600" letter-spacing="1">OR CONTINUE WITH</text>
+  <line x1="235" y1="494" x2="346" y2="494" stroke="#E5E0D8" stroke-width="1"/>
+
   <!-- Google button -->
-  <rect x="24" y="580" width="342" height="52" rx="12" fill="#FFFFFF" stroke="#E8E2D7" stroke-width="1.5"/>
-  <circle cx="60" cy="606" r="10" fill="#4285F4"/>
-  <text x="195" y="611" font-family="Inter,sans-serif" font-size="15" fill="#2A2825" font-weight="500" text-anchor="middle">Continue with Google</text>
-  <!-- Footer -->
-  <text x="195" y="760" font-family="Inter,sans-serif" font-size="14" fill="#8A857C" text-anchor="middle">Don't have an account? <tspan fill="#1E6FD9" font-weight="600">Sign up</tspan></text>
+  <rect x="44" y="514" width="138" height="48" rx="6" fill="#FFFFFF" stroke="#E5E0D8" stroke-width="1"/>
+  <!-- Multicolour Google G -->
+  <text x="76" y="543" font-family="Inter,sans-serif" font-size="15" fill="#4285F4" font-weight="700">G</text>
+  <text x="87" y="543" font-family="Inter,sans-serif" font-size="15" fill="#EA4335" font-weight="700">o</text>
+  <text x="98" y="543" font-family="Inter,sans-serif" font-size="15" fill="#FBBC05" font-weight="700">o</text>
+  <text x="109" y="543" font-family="Inter,sans-serif" font-size="15" fill="#4285F4" font-weight="700">g</text>
+  <text x="118" y="543" font-family="Inter,sans-serif" font-size="15" fill="#34A853" font-weight="700">l</text>
+  <text x="124" y="543" font-family="Inter,sans-serif" font-size="15" fill="#EA4335" font-weight="700">e</text>
+
+  <!-- Apple button -->
+  <rect x="208" y="514" width="138" height="48" rx="6" fill="#FFFFFF" stroke="#E5E0D8" stroke-width="1"/>
+  <text x="277" y="544" font-family="Inter,sans-serif" font-size="18" fill="#1C1917" text-anchor="middle"></text>
+  <text x="300" y="544" font-family="Inter,sans-serif" font-size="15" fill="#1C1917" font-weight="500">Apple</text>
+
+  <!-- Sign up link -->
+  <text x="195" y="604" font-family="Inter,sans-serif" font-size="13" fill="#8A857C" text-anchor="middle">Don't have an account?</text>
+  <text x="195" y="624" font-family="Inter,sans-serif" font-size="13" fill="#A06A3A" text-anchor="middle" font-weight="700" letter-spacing="0.5">CREATE AN ACCOUNT</text>
+
   <!-- Home indicator -->
-  <rect x="155" y="820" width="80" height="4" rx="2" fill="#2A2825" opacity="0.2"/>
+  <rect x="155" y="820" width="80" height="4" rx="2" fill="#1C1917" opacity="0.15"/>
 </svg>

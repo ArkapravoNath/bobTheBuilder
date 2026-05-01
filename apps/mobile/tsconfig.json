@@ -2,11 +2,24 @@
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
     "strict": true,
+    "types": [
+      "jest"
+    ],
     "paths": {
-      "@/*": ["./src/*"],
-      "@bob/shared-schemas": ["../../packages/shared-schemas/src/index.ts"]
+      "@/*": [
+        "./src/*"
+      ],
+      "@bob/shared-schemas": [
+        "../../packages/shared-schemas/src/index.ts"
+      ]
     },
     "baseUrl": "."
   },
-  "include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.d.ts", "expo-env.d.ts"]
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".expo/types/**/*.d.ts",
+    "expo-env.d.ts",
+    ".expo/types/**/*.ts"
+  ]
 }
